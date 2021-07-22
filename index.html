@@ -1,0 +1,81 @@
+ 
+<html>
+  <head>
+    <title>Emotion To Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+
+      <button class="heading">EMOTION IDENTIFIER
+        <br>
+        <span>
+          &#128522;
+          &#128512;
+          &#128532;
+          &#128546;
+          &#128545;
+          &#128548;
+        </span>
+      </button>
+
+      <br><br>
+
+      <p style="font-size: 22px;">Take your selfie to generate emoji
+      	<br>
+        <b style="color: yellow">Are you Happy?</b>
+        <br>
+        <b style="color: black">Are you Sad?</b>
+        <br>
+        <b style="color: red">Are you Angry?</b>
+        <br>
+      </p>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Webcam View</label>
+
+        <br><br>
+        <div class="div" id="camera-display">
+
+        </div>
+        <button onclick="snapit()" class="btn btn-danger">Capture</button>
+
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>prediction 1</label>
+        <p id="result_1" class="emation_name"></p>
+        <p id="emoji_1" class="emoji"></p>
+           <br><br>
+        <label>prediction 2</label>
+        <p id="result_2" class="emation_name"></p>
+        <p id="emoji_2" class="emoji"></p>
+      </div>
+      
+     <div class="col-md-4 col-sm-12 col-xs-12">
+     <label>Snapshot</label>
+     <div id="img-captured" class="div">
+
+     </div>
+     <button class="btn btn-primary" onclick="predict()">Predict me</button>
+     </div>
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
